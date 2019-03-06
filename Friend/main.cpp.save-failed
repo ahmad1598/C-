@@ -1,0 +1,227 @@
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include "FriendList.cpp"
+using namespace std;
+
+int main()
+{
+   string fname[18], lname[18], cphone[18];
+   string *fPointer;
+   fPointer = fname;
+   int selection;
+
+   do {
+       system("cls");
+       cout << "Welcome to the Friend's Manager!"
+           << "1) Add a Friend "
+           << "2) Remove a Friend "
+           << "3) Display all Friends"
+           << "4) Exit"
+           << "Enter selection: " << endl;
+       cin >> selection;
+
+       // process the selection
+       switch (selection)
+       {
+       case 1:
+       FriendList f1;
+        string first;
+        string last;
+        string phone;
+           cout << "Add a Friend: ";
+           cin >> first;
+           cin >> lname;
+           cin >> cphone;
+           f1.setFirstName(fname);
+           f1.setLastName(lname);
+           f1.getLastName(cphone);
+
+           int count;
+           if (fPointer == NULL){
+            fname[0] = first;
+            count++;
+           }else{
+            fname[count+1] = first;
+           }
+
+           break;
+       case 2:
+           cout << "Remove a Friend: ";
+           delete f1;
+           break;
+       case 3:
+           cout << "Display all Friends";
+           f1.display();
+           break;
+       case 4:
+           break;
+       default:
+           cout << "Invalid Choice! " << endl;
+           system("PAUSE");
+
+       }
+
+   } while (selection != 4);
+
+   system("PAUSE");
+   return 0;
+}
+
+
+
+
+
+//#include "Friend.cpp"
+//#include <iostream>
+//#include <array>
+//#include <string>
+//
+////using std::cout;
+////using std:: cin;
+//////using std:: getline;
+////using std:: string;
+//
+//using namespace std;
+//
+//
+////    Friend list[10];
+//
+//struct FriendArray
+//{
+//    string name;
+//    string last;
+//    int phone;
+//};
+//int main(){
+//
+//        FriendArray* objects = NULL;
+//        int count = 0;
+//
+//        cout << "--[ Manage My List Of Friends ]--" << endl;
+//        FriendArray friends;
+//
+//        cout << "1.Add a friend";
+//        cout << "2.Remove a friend";
+//        cout << "3.Display all friends";
+//        cout << "4.Exit Program";
+//
+//        int selection;
+//        cin >> selection;
+//
+//       // Friend myFriends;
+//
+//      //  int count = 0;
+//
+//     //   array <Friend, 10> pList_;
+//
+//
+//        while (selection != 4)
+//        {
+//            int number = 0;
+//
+//            if (selection == 1)
+//            {
+//                cout << "First Name: ";
+//                string first;
+//                cin >> first;
+//                friends.name = first;
+//               // getline(cin,friends.name);
+//                //cin >> first;
+//
+//                cout << "Last Name: ";
+//                string last;
+//                cin >> last;
+//                friends.last = last;
+//                //getline(cin,friends.last);
+//                //cin >> last;
+//
+//                cout << "Cell phone: ";
+//                int cellPhone;
+//                cin >> cellPhone;
+//                friends.phone = cellPhone;
+//              //  getline(cin, friends.phone);
+//                //cin >> cellPhone;
+//
+//                if (objects = NULL)
+//                {
+//                    objects = new FriendArray[1];
+//                    objects[0] = friends;
+//                    count++;
+//                }
+//                else
+//                {
+//                    FriendArray* temp = objects;
+//                    objects = new FriendArray[count + 1];
+//
+//                    for (int i = 0; i < count; i++ )
+//                    {
+//                        objects[i] = temp[i];
+//                    }
+//                    objects[count] = friends;
+//                    count++;
+//                    delete [] temp;
+//                }
+//             //   addFriend(); // adds the friend to the array list
+//             //   count++;
+//
+//              //  system("cls");
+//            }
+//
+//            if (selection == 2)
+//            {
+////                Friend f1;
+////                cout << "Whats the first Name: ";
+////                string first;
+////                cin >> first;
+////                f1.setFirstName(first);
+////                cout << "Whats the Last Name: ";
+////                String last;
+////                cin >> last;
+////                cout << "Whats there Age";
+////                String age;
+////                cin >> age;
+//           //     myFriends.setList(first, last, age);  // sets up the friend to remove
+//             //   removeFriend(); // removes the friend from the array list
+//            }// end of if
+//
+//            if (selection == 3)
+//            {
+//
+//                 //System.out.println(bornList.toString());
+//
+//                for(int i= 0; i < 1;i++)
+//                {
+//             //   System.out.println(myFriends.list);
+//                }
+//            }
+//
+//            cout << "1.Add a friend";
+//            cout << "2.Remove a friend";
+//            cout << "3.Display all friends";
+//            cout << "4.Exit Program";
+//            cin >> selection;
+//
+//
+//
+//            }
+//            return 0;
+//        } // end of while loop
+//     // end of main method
+//
+//
+//     /****************Add to Array Method************************/
+////    void addFriend()
+////    {
+////        list.add(firstName);
+////        list.add(lastName);
+////        list.add(cellPhone);
+////    }
+//
+//        /****************Remove a friend method************************/
+////    public void removeFriend()
+////    {
+////        list.remove(firstName);
+////        list.remove(lastName);
+////        list.remove(cellPhone);
+////    }

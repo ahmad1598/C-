@@ -1,0 +1,62 @@
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+
+using namespace std;
+
+class FriendList
+{
+public:
+   FriendList();
+   void display(string,string,string);
+
+   // Accessor Functions
+   string getFirstName();
+   string getLastName();
+   string getCellPhone();
+
+
+   // Mutator Functions
+   void setFirstName(string fn[]);
+   void setLastName(string ln[]);
+   void setCellPhone(string cp[]);
+
+private:
+   string firstName[];
+   string lastName[];
+   string cellPhone[];
+
+};
+
+
+//#ifndef FRIEND_H
+//#define FRIEND_H
+//
+//#include <iostream>
+//#include<string>
+//
+//using namespace std;
+//
+//class Friend
+//{
+//    public:
+//        Friend(string, string, int);
+//
+//        string getFirstName(){return firstName; }
+//        string getLastName() {return lastName; }
+//        int getCellPhone(){return cellPhone; }
+//        void setFirstName( string f ){firstName = f; }
+//        void setLastName( string l ) {lastName = l; }
+//        void setCellPhone(int c) {cellPhone = c; }
+//
+//        void display();
+//
+//
+//
+//    private:
+//        string firstName;
+//        string lastName;
+//        int cellPhone;
+//};
+//
+//#endif // FRIEND_H
